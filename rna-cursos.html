@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RNA Informatica</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-image: url('imagens/fundo do site.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			color: #fff;
+		}
+		.container {
+			background-color: rgba(30, 33, 37, 0.8);
+			padding: 20px;
+			margin-top: 20px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+		h1 {
+			font-weight: bold;
+			margin-top: 0;
+			color: #34a853;
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+		}
+		.navbar {
+			background-color: rgba(36, 39, 48, 0.8);
+			border: none;
+			margin-bottom: 0;
+		}
+		.navbar-brand {
+			font-weight: bold;
+			color: #fff;
+		}
+		.navbar-default .navbar-nav>li>a {
+			color: #fff;
+		}
+		.navbar-default .navbar-nav>li>a:hover {
+			color: #34a853;
+		}
+		.navbar-header .logo {
+			height: 50px;
+			margin-right: 10px;
+		}
+		.carousel-inner img {
+			width: 100%;
+			height: auto;
+		}
+		#missao {
+			margin-top: 20px;
+		}
+		#back-to-top {
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+			z-index: 99;
+			background-color: #34a853;
+			color: #fff;
+			cursor: pointer;
+			padding: 10px 20px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><img src="Imagens/LOGO RNA CURSOS.jpg" alt="Logo" class="logo">RNA Informatica</a>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html" style="color: #fff;">Home</a></li>
+				<li><a href="sobre.html" style="color: #fff;">Sobre</a></li>
+				<li><a href="biblioteca.html" style="color: #fff;">Biblioteca</a></li>
+				<li><a href="mural.html" style="color: #fff;">Mural</a></li>
+				<li><a href="galeria.html" style="color: #fff;">Galeria</a></li>
+				<li><a href="contato.html" style="color: #fff;">Contato</a></li>
+				<li><a href="trabalhe conosco.html" style="color: #fff;">Trabalhe conosco</a></li>
+				<li><a href="Assistente Virtual.html" style="color: #fff;">Assistente Virtual</a></li>
+				<li><a href="inscreva-se.html" style="color: #fff;">Inscreva-se</a></li>
+			</ul>
+		</div>
+	</div>
+<div class="container" style="opacity: 0.9;">
+	<h1>RNA Informatica</h1>
+	<p>Uma escola de informatica focada em tecnologia e inovacao</p>
+	<p>Oferecemos cursos de programacao, design, seguranca e muito mais!</p>
+</div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="Imagens/pessoa1.jpg" alt="Image 1">
+		</div>
+		<div class="item">
+			<img src="Imagens/pessoa2.png" alt="Image 2">
+		</div>
+		<div class="item">
+			<img src="Imagens/pessoa3.jpg" alt="Image 3">
+		</div>
+		<div class="item">
+			<img src="Imagens/pessoas1.webp" alt="Image 3">
+		</div>
+		<div class="item">
+			<img src="Imagens/pessoas2.webp" alt="Image 3">
+		</div>
+		<div class="item">
+			<img src="Imagens/pessoas3.webp" alt="Image 3">
+		</div>
+	</div>
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+<h2>Nossos Cursos</h2>
+<div class="row">
+	<div class="col-md-4">
+		<img src="Imagens/webdesigner.jpg" alt="Web Design" class="img-responsive">
+		<h3>Desenvolvimento Web</h3>
+		<p>Este curso aborda os principais conceitos de desenvolvimento web, incluindo HTML, CSS, JavaScript e frameworks como React e Angular.</p>
+		<p>Valor: R$ 2.000,00</p>
+	</div>
+	<div class="col-md-4">
+		<img src="Imagens/operador de computador.webp" alt="Operador de Computador" class="img-responsive">
+		<h3>Operador de computadores</h3>
+		<p>Este curso aborda os principais conceitos de uso de computadores, incluindo hardware e software.</p>
+		<p>Valor: R$ 1.500,00</p>
+	</div>
+	<div class="col-md-4">
+		<img src="Imagens/desenvolvedor de jogos.png" alt="Desenvolvedor de Jogos" class="img-responsive">
+		<h3>Desenvolvimento de Jogos</h3>
+		<p>Este curso aborda os principais conceitos de desenvolvimento de jogos, incluindo desenvolvimento de jogos 2D e 3D.</p>
+		<p>Valor: R$ 2.500,00</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<img src="Imagens/Auxiliar de Farmácia.jpg" alt="Auxiliar de Farmácia" class="img-responsive">
+		<h3>Auxiliar de Farmácia</h3>
+		<p>Este curso aborda os principais conceitos de auxiliar de farmácia, incluindo medicina, farmacia e medicina veterina.</p>
+		<p>Valor: R$ 1.000,00</p>
+	</div>
+	<div class="col-md-4">
+		<img src="Imagens/Assistente administrativo.jpg" alt="Assistente Administrativo" class="img-responsive">
+		<h3>Assistente Administrativo</h3>
+		<p>Este curso aborda os principais conceitos de assistente administrativo, incluindo contabilidade, marketing e recursos humanos.</p>
+		<p>Valor: R$ 1.800,00</p>
+	</div>
+	<div class="col-md-4">
+		<img src="Imagens/curso-programacao.webp" alt="Desenvolvedor de Software" class="img-responsive">
+		<h3>Desenvolvedor de Software</h3>
+		<p>Este curso aborda os principais conceitos de desenvolvimento de software, incluindo linguagens de programacao, frameworks e arquitetura de software.</p>
+		<p>Valor: R$ 3.000,00</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<img src="Imagens/Secretariado.webp" alt="Secretariado" class="img-responsive">
+		<h3>Secretariado</h3>
+		<p>Este curso aborda os principais conceitos de secretariado, incluindo organizacao, comunicacao e trabalho em equipe.</p>
+		<p>Valor: R$ 1.500,00</p>
+	</div>
+	<div class="col-md-4">
+		<img src="Imagens/curso turismo.jpg" alt="Curso de turismo" class="img-responsive">
+		<h3>Curso de turismo</h3>
+		<p>Este curso aborda os principais conceitos de turismo, incluindo turismo nacional e internacional.</p>
+		<p>Valor: R$ 1.000,00</p>
+	</div>
+	<div class="col-md-4">
+		<img src="Imagens/curso de vendas.webp" alt="Curso de vendas" class="img-responsive">
+		<h3>Curso de vendas</h3>
+		<p>Este curso aborda os principais conceitos de vendas, incluindo vendas online e presenciais.</p>
+		<p>Valor: R$ 1.000,00</p>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 100) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		$('#back-to-top').click(function(){
+			$('html, body').animate({scrollTop : 0},800);
+			return false;
+		});
+	});
+</script>
+<button id="back-to-top">Voltar ao Topo</button>
+<footer class="footer">
+	<div class="container">
+		<p class="text-muted">
+			RNA Informatica 2022 - Todos os direitos reservados<br>
+			Rua dos Carneiros, 411, Centro, Tururu-CE, 62655-000
+		</p>
+	</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grupo RNA Informatica</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("imagens/fundo do site.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+    .container {
+      background-color: rgba(30, 33, 37, 0.8);
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-weight: bold;
+      margin-top: 0;
+      color: #34a853;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .navbar {
+      background-color: rgba(36, 39, 48, 0.8);
+      border: none;
+      margin-bottom: 0;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #fff;
+    }
+    .navbar-default .navbar-nav>li>a {
+      color: #fff;
+    }
+    .navbar-default .navbar-nav>li>a:hover {
+      color: #34a853;
+    }
+    .navbar-header .logo {
+      height: 50px;
+      margin-right: 10px;
+    }
+    .carousel-inner img {
+      width: 100%;
+      height: auto;
+    }
+    #missao {
+      margin-top: 20px;
+    }
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background-color: #34a853;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+          $('#back-to-top').fadeIn();
+        } else {
+          $('#back-to-top').fadeOut();
+        }
+      });
+      $('#back-to-top').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+      });
+    });
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="Imagens/LOGO GRUPO INFORMATICA.jpg" alt="Logo" class="logo" style="max-height: 35px;">
+        </a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html" style="color: #fff;">Home</a></li>
+          <li><a href="sobre.html" style="color: #fff;">Sobre</a></li>
+          <li><a href="biblioteca.html" style="color: #fff;">Biblioteca</a></li>
+          <li><a href="mural.html" style="color: #fff;">Mural</a></li>
+          <li><a href="galeria.html" style="color: #fff;">Galeria</a></li>
+          <li><a href="contato.html" style="color: #fff;">Contato</a></li>
+          <li><a href="trabalhe conosco.html" style="color: #fff;">Trabalhe conosco</a></li>
+          <li><a href="Assistente Virtual.html" style="color: #fff;">Assistente Virtual</a></li>
+          <li><a href="inscreva-se.html" style="color: #fff;">Inscreva-se</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Grupo RNA Informatica</h1>
+    <p>Um Grupo que se compromete com a formação de profissionais competentes e inovadores, proporcionando soluções de alta qualidade na area de Tecnologia da Informacao.</p>
+  </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="Imagens/pessoa1.jpg" alt="Image 1">
+      </div>
+      <div class="item">
+        <img src="Imagens/pessoa2.png" alt="Image 2">
+      </div>
+      <div class="item">
+        <img src="Imagens/pessoa3.jpg" alt="Image 3">
+      </div>
+      <div class="item">
+        <img src="Imagens/pessoas1.webp" alt="Image 3">
+      </div>
+      <div class="item">
+        <img src="Imagens/pessoas2.webp" alt="Image 3">
+      </div>
+      <div class="item">
+        <img src="Imagens/pessoas3.webp" alt="Image 3">
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div id="missao" class="container" style="opacity: 0.9;">
+    <h1>Nossa Missao</h1>
+    <p style="text-align: justify; line-height: 1.5;">Missão da Escola RNA Informática
+
+        A Escola RNA Informática tem como missão proporcionar uma educação de alta qualidade na área de Tecnologia da Informação, capacitando os alunos com as habilidades e conhecimentos necessários para enfrentar os desafios do mercado de trabalho contemporâneo. Nosso compromisso é com a formação integral dos alunos, valorizando tanto o desenvolvimento técnico quanto o crescimento pessoal e profissional.
+        
+        <h2>Objetivos Técnicos e Pedagógicos</h2>
+        <ol>
+            <li>Excelência Acadêmica: Oferecer um currículo robusto e atualizado, alinhado com as demandas do mercado e as tendências tecnológicas. Nossos cursos são ministrados por profissionais qualificados e experientes, garantindo uma formação de excelência.</li>
+            <li>Desenvolvimento de Competências: Capacitar os alunos com competências técnicas em programação, desenvolvimento de software, redes de computadores, segurança da informação, entre outras áreas relevantes. Além disso, promover habilidades de resolução de problemas, pensamento crítico e trabalho em equipe.</li>
+            <li>Inovação e Atualização Constante: Manter um ambiente de ensino dinâmico e inovador, adotando novas tecnologias e métodos pedagógicos. Acreditamos na importância de atualizar constantemente nosso material didático e recursos de ensino para acompanhar a evolução tecnológica.</li>
+            <li>Preparação para o Mercado de Trabalho: Facilitar a inserção dos alunos no mercado de trabalho por meio de parcerias com empresas e instituições. Oferecer programas de estágio, workshops, feiras de emprego e outras iniciativas que conectem os alunos às oportunidades profissionais.</li>
+            <li>Desenvolvimento Pessoal e Ético: Promover valores éticos e profissionais, estimulando a responsabilidade, a integridade e o respeito. Encorajar o desenvolvimento pessoal dos alunos, apoiando-os na construção de suas carreiras e na busca por realizações pessoais.</li>
+        </ol>
+        
+        <h2>Metodologia de Ensino</h2>
+        <ul>
+            <li>Nossa metodologia de ensino é baseada em princípios pedagógicos modernos que valorizam a participação ativa dos alunos no processo de aprendizado. Utilizamos abordagens práticas e teóricas para garantir uma formação completa e eficaz. As aulas são estruturadas em:</li>
+            <li>Aulas Teóricas: Proporcionam a base conceitual necessária para a compreensão dos temas abordados.</li>
+            <li>Laboratórios Práticos: Oferecem um ambiente controlado para a aplicação prática dos conhecimentos adquiridos, permitindo que os alunos desenvolvam suas habilidades técnicas.</li>
+            <li>Projetos Integradores: Promovem a integração dos conhecimentos através de projetos que simulam situações reais do mercado de trabalho.</li>
+            <li>Avaliações Contínuas: Realizamos avaliações periódicas para monitorar o progresso dos alunos e identificar áreas de melhoria.</li>
+        </ul>
+        
+        <h2>Compromisso com a Comunidade</h2>
+        A Escola RNA Informática se dedica não apenas à formação de profissionais competentes, mas também ao desenvolvimento da comunidade. Promovemos eventos, cursos e workshops abertos ao público, visando democratizar o acesso ao conhecimento e estimular o desenvolvimento tecnológico regional.</p>
+  </div>
+<div id="nossas-marcas" class="container" style="opacity: 0.9; margin-top: 30px;">
+  <h1>Nossas Marcas</h1>
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <a href="rna-cursos.html"><img src="Imagens/LOGO RNA CURSOS.jpg" alt="RNA CURSOS" class="img-responsive" style="max-height: 150px; margin: 0 auto;"></a>
+      <p>RNA CURSOS</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <a href="rna-assistencia.html"><img src="Imagens/LOGO RNA ASSISTENCIA TECNICA.jpg" alt="RNA ASSISTENCIA TECNICA" class="img-responsive" style="max-height: 150px; margin: 0 auto;"></a>
+      <p>RNA ASSISTENCIA TECNICA</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <a href="rna-programacao.html"><img src="Imagens/LOGO RNA PROGRAMAÇÃO & DESIGNER.jpg" alt="RNA PROGRAMAÇÃO & DESIGNER" class="img-responsive" style="max-height: 150px; margin: 0 auto;"></a>
+      <p>RNA PROGRAMAÇÃO & DESIGNER</p>
+    </div>
+  </div>
+</div>
+
+  <button id="back-to-top">Voltar ao Topo</button>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">
+        RNA Informatica 2022 - Todos os direitos reservados<br>
+        Rua dos Carneiros, 411, Centro, Tururu-CE, 62655-000
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+

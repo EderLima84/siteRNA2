@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mural - RNA Informática</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('Imagens/fundo-do-site.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .container {
+      background-color: rgba(30, 33, 37, 0.9);
+      width: 90%;
+      max-width: 1200px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      font-weight: bold;
+      text-align: center;
+      color: #34a853;
+      margin-bottom: 20px;
+    }
+    .navbar {
+      background-color: rgba(36, 39, 48, 0.8);
+      border: none;
+      margin-bottom: 0;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #fff;
+    }
+    .navbar-default .navbar-nav>li>a {
+      color: #fff;
+    }
+    .navbar-default .navbar-nav>li>a:hover {
+      color: #34a853;
+    }
+    .form-group textarea {
+      resize: none;
+    }
+    .list-group-item {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+    #admin-section {
+      display: none; /* Escondido por padrão */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">RNA Informática</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="imagens/LOGO GRUPO INFORMATICA.jpg" alt="Logo" class="logo" style="height: 50px;">
+          RNA Informática
+        </a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html" style="color: #fff;">Home</a></li>
+            <li><a href="sobre.html" style="color: #fff;">Sobre</a></li>
+            <li><a href="biblioteca.html" style="color: #fff;">Biblioteca</a></li>
+            <li><a href="mural.html" style="color: #fff;">Mural</a></li>
+            <li><a href="galeria.html" style="color: #fff;">Galeria</a></li>
+            <li><a href="contato.html" style="color: #fff;">Contato</a></li>
+            <li><a href="trabalhe conosco.html" style="color: #fff;">Trabalhe conosco</a></li>
+            <li><a href="Assistente Virtual.html" style="color: #fff;">Assistente Virtual</a></li>
+            <li><a href="inscreva-se.html" style="color: #fff;">Inscreva-se</a></li>
+        </ul>
+    </div>
+</div>
+  </nav>
+
+  <div class="container mt-4">
+    <h1>Mural de Avisos</h1>
+    <p class="text-center">Avisos importantes da administração.</p>
+
+    <!-- Área de Login do Administrador -->
+    <div id="admin-login">
+      <input type="password" id="admin-password" class="form-control" placeholder="Senha do Administrador">
+      <button onclick="checkAdmin()" class="btn btn-primary btn-block">Entrar</button>
+    </div>
+
+    <!-- Área de Postagem (somente administradores) -->
+    <div id="admin-section">
+      <h3>Postar um novo aviso</h3>
+      <form id="post-form">
+        <div class="form-group">
+          <textarea id="new-post" class="form-control" rows="4" placeholder="Digite seu aviso..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Postar Aviso</button>
+      </form>
+    </div>
+
+    <!-- Lista de Avisos -->
+    <h2>Avisos</h2>
+    <ul id="post-list" class="list-group">
+      <!-- Os avisos serão adicionados aqui -->
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      loadPosts();
+    });
+
+    function checkAdmin() {
+      var password = document.getElementById("admin-password").value;
+      if (password === "1234") { // Troque pela senha real
+        document.getElementById("admin-login").style.display = "none";
+        document.getElementById("admin-section").style.display = "block";
+      } else {
+        alert("Senha incorreta!");
+      }
+    }
+
+    document.getElementById("post-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var postText = document.getElementById("new-post").value;
+      if (postText.trim() === "") {
+        alert("O aviso não pode estar vazio!");
+        return;
+      }
+      addPost(postText);
+      document.getElementById("new-post").value = "";
+    });
+
+    function addPost(text) {
+      var posts = JSON.parse(localStorage.getItem("posts")) || [];
+      var newPost = {
+        text: text,
+        date: new Date().toLocaleString()
+      };
+      posts.unshift(newPost); // Adiciona no topo da lista
+      localStorage.setItem("posts", JSON.stringify(posts));
+      loadPosts();
+    }
+
+    function loadPosts() {
+      var posts = JSON.parse(localStorage.getItem("posts")) || [];
+      var postList = document.getElementById("post-list");
+      postList.innerHTML = "";
+      posts.forEach(function (post) {
+        var li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<strong>${post.date}</strong><br>${post.text}`;
+        postList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RNA Programa o e Designer</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-image: url('imagens/fundo do site.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			color: #fff;
+		}
+		.container {
+			background-color: rgba(30, 33, 37, 0.8);
+			padding: 20px;
+			margin-top: 20px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+		h1 {
+			font-weight: bold;
+			margin-top: 0;
+			color: #34a853;
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+		}
+		.navbar {
+			background-color: rgba(36, 39, 48, 0.8);
+			border: none;
+			margin-bottom: 0;
+		}
+		.navbar-brand {
+			font-weight: bold;
+			color: #fff;
+		}
+		.navbar-default .navbar-nav>li>a {
+			color: #fff;
+		}
+		.navbar-default .navbar-nav>li>a:hover {
+			color: #34a853;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Rna Informatica</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">
+					<img src="Imagens/LOGO RNA PROGRAMAÇÃO & DESIGNER.jpg" alt="Logo" class="logo" style="height: 50px;">
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html" style="color: #fff;">Home</a></li>
+					<li><a href="sobre.html" style="color: #fff;">Sobre</a></li>
+					<li><a href="biblioteca.html" style="color: #fff;">Biblioteca</a></li>
+					<li><a href="mural.html" style="color: #fff;">Mural</a></li>
+					<li><a href="galeria.html" style="color: #fff;">Galeria</a></li>
+					<li><a href="contato.html" style="color: #fff;">Contato</a></li>
+					<li><a href="trabalhe conosco.html" style="color: #fff;">Trabalhe conosco</a></li>
+					<li><a href="Assistente Virtual.html" style="color: #fff;">Assistente Virtual</a></li>
+					<li><a href="inscreva-se.html" style="color: #fff;">Inscreva-se</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<h1>RNA Programa o e Designer</h1>
+		<p>A RNA Programa o e Designer  uma empresa especializada em desenvolvimento de software e design gr fico, com mais de 10 anos de experi ncia no mercado.</p>
+		<p>Oferecemos servi os de:</p>
+		<ul>
+			<li>Desenvolvimento de software</li>
+			<li>Desenvolvimento de jogos</li>
+			<li>Design gr fico</li>
+			<li>Desenvolvimento de sites</li>
+		</ul>
+		<p>Contate-nos para saber mais sobre nossos servi os e como podemos ajudar a sua empresa.</p>
+	</div>
+	<div class="container">
+		<h2>Solicite Nossos Serviços</h2>
+		<form action="https://formspree.io/edercleidiane2018@gmail.com" method="POST">
+			<div class="form-group">
+				<label for="nome">Nome:</label>
+				<input type="text" name="nome" id="nome" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" name="_replyto" id="email" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label for="mensagem">Mensagem:</label>
+				<textarea name="mensagem" id="mensagem" class="form-control" rows="5" placeholder="descreva aqui os detalhes do seu problema" required></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</form>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 100) {
+					$('#back-to-top').fadeIn();
+				} else {
+					$('#back-to-top').fadeOut();
+				}
+			});
+			$('#back-to-top').click(function(){
+				$('html, body').animate({scrollTop : 0},800);
+				return false;
+			});
+		});
+	</script>
+	<button id="back-to-top" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1000;" class="btn btn-primary">Voltar ao Topo</button>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">
+				RNA Programa o e Designer 2022 - Todos os direitos reservados<br>
+				Rua dos Carneiros, 411, Centro, Tururu-CE, 62655-000
+			</p>
+		</div>
+	</footer>
+</body>
+</html>

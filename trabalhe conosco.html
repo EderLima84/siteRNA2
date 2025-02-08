@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhe Conosco - RNA Informática</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imagens/fundo do site.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        .container {
+            background-color: rgba(30, 33, 37, 0.8);
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-weight: bold;
+            margin-top: 0;
+            color: #34a853;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .navbar {
+            background-color: rgba(36, 39, 48, 0.8);
+            border: none;
+            margin-bottom: 0;
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+        .navbar-default .navbar-nav>li>a {
+            color: #fff;
+        }
+        .navbar-default .navbar-nav>li>a:hover {
+            color: #34a853;
+        }
+        .form-group label {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img src="Imagens/LOGO GRUPO INFORMATICA.jpg" alt="RNA Informatica"></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">RNA Informática</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="biblioteca.html">Biblioteca</a></li>
+                    <li><a href="mural.html">Mural</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="trabalhe_conosco.html">Trabalhe Conosco</a></li>
+                    <li><a href="Assistente Virtual.html" style="color: #fff;">Assistente Virtual</a></li>
+                    <li><a href="inscreva-se.html">Inscreva-se</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Trabalhe Conosco</h1>
+        <p>Preencha o formulário abaixo e envie seu currículo para fazer parte da equipe RNA Informática.</p>
+        <form action="https://formspree.io/your-email@example.com" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" name="nome" id="nome" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" id="telefone" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="cargo">Cargo desejado:</label>
+                <input type="text" name="cargo" id="cargo" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="experiencia">Experiência Profissional:</label>
+                <textarea name="experiencia" id="experiencia" class="form-control" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="habilidades">Habilidades e Competências:</label>
+                <textarea name="habilidades" id="habilidades" class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="curriculo">Anexar Currículo (PDF ou DOCX):</label>
+                <input type="file" name="curriculo" id="curriculo" class="form-control" accept=".pdf,.doc,.docx" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                RNA Informatica 2022 - Todos os direitos reservados<br>
+                Rua dos Carneiros, 411, Centro, Tururu-CE, 62655-000
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

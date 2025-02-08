@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente Virtual - Serviços</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imagens/fundo do site.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        .container {
+            background-color: rgba(30, 33, 37, 0.8);
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-weight: bold;
+            margin-top: 0;
+            color: #34a853;
+        }
+        .navbar {
+            background-color: rgba(36, 39, 48, 0.8);
+            border: none;
+            margin-bottom: 0;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-default .navbar-nav>li>a {
+            color: #fff;
+        }
+        .navbar-default .navbar-nav>li>a:hover {
+            color: #34a853;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .btn-primary {
+            background-color: #34a853;
+            border-color: #34a853;
+        }
+        .btn-primary:hover {
+            background-color: #2c8b43;
+            border-color: #2c8b43;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="imagens/LOGO GRUPO INFORMATICA.jpg" alt="Logo RNA Informática" style="height: 50px;">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" style="color: #fff;">Início</a></li>
+                    <li><a href="sobre.html" style="color: #fff;">Sobre</a></li>
+                    <li><a href="mural.html" style="color: #fff;">Mural de Recados</a></li>
+                    <li><a href="galeria.html" style="color: #fff;">Galeria</a></li>
+                    <li><a href="inscreva-se.html" style="color: #fff;">Inscreva-se</a></li>
+                    <li><a href="Assistente Virtual.html" style="color: #fff;">Assistente Virtual</a></li>
+                    <li><a href="trabalhe conosco.html" style="color: #fff;">Trabalhe Conosco</a></li>
+                    <li><a href="contato.html" style="color: #fff;">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Serviço de Assistente Virtual</h1>
+        <p>Proporcionamos serviços de assistente virtual para empresas, ajudando na organização de e-mails, agendas e muito mais. Nosso objetivo é otimizar o tempo e aumentar a produtividade da sua empresa.</p>
+        <h2>Entre em Contato</h2>
+        <form action="mailto:ederportelalima@hotmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
+

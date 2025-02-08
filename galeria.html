@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - RNA Informática</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('Imagens/fundo do site.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            padding-top: 70px;
+        }
+
+        /* Barra de navegação */
+        .navbar {
+            background-color: #242730;
+            border: none;
+        }
+        .navbar-brand, .navbar-nav > li > a {
+            color: #fff !important;
+        }
+        .navbar-nav > li > a:hover {
+            color: #34a853 !important;
+        }
+
+        /* Container da galeria */
+        .gallery-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Itens da galeria */
+        .gallery-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .gallery-item img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #ddd;
+            transition: transform 0.3s;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Vídeos */
+        .video-container {
+            width: 100%;
+            max-height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 3px solid #ddd;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Rodapé */
+        .footer {
+            background-color: #242730;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 0;
+        }
+
+        /* Botão de Voltar ao Topo */
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #34a853;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #back-to-top:hover {
+            background-color: #2c8c42;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">RNA Informática</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">RNA Informática</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" style="color: #fff;">Home</a></li>
+                    <li><a href="sobre.html" style="color: #fff;">Sobre</a></li>
+                    <li><a href="biblioteca.html" style="color: #fff;">Biblioteca</a></li>
+                    <li><a href="mural.html" style="color: #fff;">Mural</a></li>
+                    <li><a href="galeria.html" style="color: #fff;">Galeria</a></li>
+                    <li><a href="contato.html" style="color: #fff;">Contato</a></li>
+                    <li><a href="trabalhe conosco.html" style="color: #fff;">Trabalhe conosco</a></li>
+                    <li><a href="Assistente Virtual.html" style="color: #fff;">Assistente Virtual</a></li>
+                    <li><a href="inscreva-se.html" style="color: #fff;">Inscreva-se</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Galeria -->
+    <div class="container gallery-container">
+        <h1>Galeria de Fotos e Vídeos dos Alunos</h1>
+
+        <h2>📸 Fotos</h2>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 gallery-item">
+                <img src="Imagens/aluno1.jpg" alt="Foto do Aluno 1" class="img-responsive">
+                <p>Aluno 1 em atividade prática</p>
+            </div>
+            <div class="col-md-6 col-sm-12 gallery-item">
+                <img src="Imagens/aluno2.webp" alt="Foto do Aluno 2" class="img-responsive">
+                <p>Aluno 2 apresentando um projeto</p>
+            </div>
+        </div>
+
+        <h2>🎥 Vídeos</h2>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 gallery-item">
+                <div class="video-container">
+                    <video controls>
+                        <source src="Videos/alunos1.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                </div>
+                <p>Vídeo de apresentação do Aluno 1</p>
+            </div>
+            <div class="col-md-6 col-sm-12 gallery-item">
+                <div class="video-container">
+                    <video controls>
+                        <source src="Videos/alunos2.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                </div>
+                <p>Vídeo de projeto do Aluno 2</p>
+            </div>
+        </div>
+    </div>
+
+    <button id="back-to-top" class="btn btn-primary">Voltar ao Topo</button>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- jQuery -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 100) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            $('#back-to-top').click(function(){
+                $('html, body').animate({scrollTop : 0}, 800);
+                return false;
+            });
+        });
+    </script>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 RNA Informática. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
