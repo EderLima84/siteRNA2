@@ -1,0 +1,224 @@
+/* Estilos globais modernos */
+:root {
+    --primary-color: #34a853;
+    --secondary-color: #4285f4;
+    --dark-bg: rgba(30, 33, 37, 0.95);
+    --nav-bg: rgba(36, 39, 48, 0.95);
+    --text-color: #ffffff;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-image: url('../fundo do site.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Container moderno com efeito de vidro */
+.container {
+    background-color: var(--dark-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Navbar moderna */
+.navbar {
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: var(--text-color) !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: var(--text-color) !important;
+    transition: var(--transition);
+    position: relative;
+    padding: 15px 20px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-default .navbar-nav > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gradient);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.navbar-default .navbar-nav > li > a:hover::after {
+    width: 80%;
+}
+
+/* Títulos modernos */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gradient);
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+/* Botões modernos */
+.btn {
+    background: var(--gradient);
+    border: none;
+    color: var(--text-color);
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+}
+
+/* Cards modernos */
+.card {
+    background: var(--dark-bg);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagens modernas */
+img {
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* Logo da navbar */
+.logo {
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* Logos das marcas */
+.marca-logo {
+    max-height: 150px;
+    margin: 0 auto 15px;
+    box-shadow: var(--shadow);
+}
+
+/* Botão Voltar ao Topo */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: var(--gradient);
+    color: var(--text-color);
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulários modernos */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(52, 168, 83, 0.25);
+    color: var(--text-color);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
